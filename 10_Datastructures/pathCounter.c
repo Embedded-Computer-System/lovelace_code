@@ -12,8 +12,9 @@ struct path {
 void calculate_path_distance(struct path *path);
 int main()
 {
+  int s[] = {1, 2, 2};
 
-    return 0;
+  return 0;
 }
 
 void calculate_path_distance(struct path *path)
