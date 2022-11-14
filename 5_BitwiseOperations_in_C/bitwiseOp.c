@@ -39,7 +39,7 @@ int main()
     uint8_t MASK_E_VAL = 0b00000100;
     
     lcd_val = lcd_val & ~(MASK_E_VAL);
-    printf("lcd_val %d\n", lcd_val);
+    printf("lcd_val %d\n", lcd_val);   
     
     return 0;
 }
