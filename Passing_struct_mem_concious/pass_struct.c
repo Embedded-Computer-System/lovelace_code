@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<inttypes.h>
+#include<stdlib.h>
 
 struct point
 {
@@ -7,12 +8,12 @@ struct point
 };
 typedef struct point Point; 
 
-Point* getMidPoint(const Point *a, const Point *b)
+void getMidPoint(const Point *a, const Point *b, Point* out)
 {
-    Point m;
-    m.x = (a->x + b->x)/2;
-    m.y = (a->y + b->y)/2;
-    return &m;
+   //Point *m = malloc(sizeof(Point));
+    out->x = (a->x + b->x)/2;
+    out->y = (a->y + b->y)/2;
+    
 }
 
 int main()
@@ -21,8 +22,9 @@ int main()
     Point p2 = {p2.x = 3, p2.y = 2};
 
     Point mid;
-    mid = getMidPoint(&p1, &p2);
-    printf("%lf, %lf\n", mid.x, mid.y);   
+    getMidPoint(&p1, &p2, &mid);
+    printf("%lf, %lf\n", mid.x, mid.y);
+    
 
     return 0;
 }
